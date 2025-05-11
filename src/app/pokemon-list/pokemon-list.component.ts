@@ -7,6 +7,7 @@ import {MatPaginatorModule, PageEvent} from '@angular/material/paginator';
 import { PokeApiService } from '@/service/poke-api.service';
 import { PokemonPaginator } from '@/model/pokemon-paginator';
 import { RouterLink } from '@angular/router';
+import { arrRemove } from 'rxjs/internal/util/arrRemove';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -46,7 +47,7 @@ export class PokemonListComponent implements OnInit, OnDestroy {
 
   public changePage({ pageSize, pageIndex }: PageEvent) {
     this.pokemonPaginator = null
-
+    this.listVoid = Array(this.pageSize)
     this.pageSize = pageSize
     this.pageIndex = pageIndex
     this.pageCurrent = pageIndex * pageSize
