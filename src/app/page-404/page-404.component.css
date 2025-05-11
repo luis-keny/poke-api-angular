@@ -1,0 +1,31 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h1 {
+    color: #01306a;
+    font-size: 48px;
+    margin: 0;
+  }
+  & p {
+    color: #1c1c1c;
+  }
+  & .btn {
+    padding: 8px 16px;
+    background-color: #01306a;
+    color: white;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+
+    &:hover {
+      background-color: #021731;
+    }
+    &:active {
+      scale: 0.95;
+    }
+  }
+}
