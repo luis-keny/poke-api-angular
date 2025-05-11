@@ -1,0 +1,10 @@
+.title {
+  text-align: center;
+  font-size: 48px;
+  margin: 0;
+  padding-block: 12px;
+
+  & span {
+    color: rgb(35, 116, 148);
+  }
+}
