@@ -1,0 +1,26 @@
+<main class="pokemon-detail-container">
+  @if (pokemonDetail) {
+    <mat-card>
+      <mat-card-content>
+        <h1>{{pokemonDetail.name}}</h1>
+        <p><strong>Base experience:</strong> {{pokemonDetail.base_experience}}</p>
+        <p><strong>Height:</strong> {{pokemonDetail.height}}</p>
+        <p><strong>Specie:</strong> {{pokemonDetail.species.name}}</p>
+        <p><strong>Abilities:</strong></p>
+        <ul>
+          @for (item of pokemonDetail.abilities; track $index) {
+            <li>{{item.ability?.name}}</li>
+          }
+        </ul>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <img class="card-image" mat-card-image [src]="getImages(pokemonDetail.id)" alt="search">
+    </mat-card>
+  } @else {
+    <p>data not found</p>
+  }
+</main>
+<div class="btn-content">
+  <a class="btn" routerLink="/">Go back</a>
+</div>

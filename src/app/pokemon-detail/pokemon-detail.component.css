@@ -1,0 +1,30 @@
+.pokemon-detail-container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.btn-content {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  padding: 8px 16px;
+  background-color: #01306a;
+  color: white;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  &:hover {
+    background-color: #021731;
+  }
+  &:active {
+    scale: 0.95;
+  }
+}
